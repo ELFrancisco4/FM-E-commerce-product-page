@@ -1,0 +1,28 @@
+@media screen and (max-width: 375px) {
+    .cart-container {
+        width: 95%;
+        height: 300px;
+        margin: 0 auto;
+        z-index: 1000;
+        position: fixed;
+        left: 10px;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    header {
+        border-bottom: solid 2px grey;
+        display: flex;
+        justify-content: space-between;
+        padding: .5em;
+    }
+
+    .cart-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
+        text-align: center;
+    }
+
+}

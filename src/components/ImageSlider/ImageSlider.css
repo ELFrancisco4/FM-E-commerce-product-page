@@ -1,0 +1,39 @@
+.product-image-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
+.product-image-slider .left-arrow,
+.product-image-slider .right-arrow {
+    position: absolute;
+    background-color: #ffffff;
+    /* or any color you prefer */
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* subtle shadow for the buttons */
+}
+
+.product-image-slider .left-arrow {
+    left: 15px;
+    /* adjust as needed */
+}
+
+.product-image-slider .right-arrow {
+    right: 15px;
+    /* adjust as needed */
+}
+
+.product-image-slider .product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

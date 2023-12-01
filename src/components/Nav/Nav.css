@@ -1,0 +1,88 @@
+nav {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+svg {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+@media screen and (max-width: 375px) {
+
+
+    .menu-items,
+    .visible {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 2em;
+    }
+
+    .close-icon {
+        cursor: pointer;
+        font-size: 24px;
+        fill: grey;
+    }
+
+    .visible {
+        left: 0;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu {
+        visibility: visible;
+    }
+
+    .closed-menu {
+        visibility: hidden;
+    }
+
+    /* Style for the li elements */
+    .menu-items li {
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #eaeaea;
+        text-align: center;
+
+    }
+
+    li {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    /* Last child li should not have a bottom border */
+    .menu-items li:last-child {
+        border-bottom: none;
+    }
+
+    .show-cart {
+        display: flex;
+        margin: 0 auto;
+        z-index: 1000;
+    }
+
+    .hide-cart {
+        display: none;
+    }
+
+}
