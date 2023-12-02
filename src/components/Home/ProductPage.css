@@ -100,5 +100,6 @@
         width: 100%;
         border-radius: 10px;
         box-shadow: 5px 8px 10px -7px #ff7d1a;
+        cursor: pointer;
     }
 }

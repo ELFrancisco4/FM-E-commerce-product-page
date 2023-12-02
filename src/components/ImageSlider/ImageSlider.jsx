@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import "./ImageSlider.css";
 
 // eslint-disable-next-line react/prop-types
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images, onClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -22,7 +22,7 @@ const ImageSlider = ({ images }) => {
   };
 
   return (
-    <div className="product-image-slider">
+    <div className="product-image-slider" onClick={onClick}>
       <button onClick={goToPrevious} className="left-arrow">
         <IoIosArrowBack />
       </button>

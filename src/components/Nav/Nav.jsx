@@ -4,10 +4,13 @@ import { IoCartOutline, IoClose } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import Cart from "../Cart/Cart";
+import { useCart } from "../../context/CartContext";
+import CartItem from "../Cart/CartItem";
 
 const Nav = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [showCart, setShowCart] = useState(false);
+
+  const { cart, showCart, setShowCart } = useCart();
 
   return (
     <>
@@ -30,7 +33,21 @@ const Nav = () => {
         <li>Contact</li>
       </ul>
       <div className={showCart ? "show-cart" : "hide-cart"}>
-        <Cart setShowCart={setShowCart} />
+        <Cart>
+          {cart.length > 0
+            ? cart.map((item) => {
+                return (
+                  <CartItem
+                    itemName={item.itemName}
+                    price={item.price}
+                    quantity={item.quantity}
+                    thumbnail={item.thumbnail}
+                    key={item.length}
+                  />
+                );
+              })
+            : null}
+        </Cart>
       </div>
     </>
   );
