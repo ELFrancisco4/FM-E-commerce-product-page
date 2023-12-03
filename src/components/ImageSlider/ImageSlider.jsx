@@ -22,11 +22,11 @@ const ImageSlider = ({ images, onClick }) => {
   };
 
   return (
-    <div className="product-image-slider" onClick={onClick}>
+    <div className="product-image-slider">
       <button onClick={goToPrevious} className="left-arrow">
         <IoIosArrowBack />
       </button>
-      <div className="product-image">
+      <div className="product-image" onClick={onClick}>
         <img src={images[currentIndex]} alt="Sneakers" />
       </div>
       <button onClick={goToNext} className="right-arrow">
