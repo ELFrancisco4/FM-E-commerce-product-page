@@ -1,3 +1,7 @@
+.product-page-container {
+    padding: 1em;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -13,8 +17,34 @@ svg {
     width: 30px;
 }
 
+.menu {
+    display: none;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.menu-items svg {
+    display: none;
+}
+
+.menu-items li {
+    font-weight: bold;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
 @media screen and (max-width: 375px) {
 
+    .menu {
+        display: block;
+    }
 
     .menu-items,
     .visible {
@@ -43,11 +73,6 @@ svg {
         left: 0;
     }
 
-    .avatar {
-        width: 50px;
-        height: 50px;
-    }
-
     .menu {
         visibility: visible;
     }
@@ -62,7 +87,6 @@ svg {
         padding: 15px;
         border-bottom: 1px solid #eaeaea;
         text-align: center;
-
     }
 
     li {

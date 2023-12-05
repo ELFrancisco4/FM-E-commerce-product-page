@@ -11,27 +11,27 @@ const Nav = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const { cart, showCart, setShowCart } = useCart();
-
   return (
-    <>
+    <div className="product-page-container">
       <nav>
         <FiMenu
           className={isVisible === false ? "menu" : "closed-menu"}
           onClick={() => setIsVisible(true)}
         />
         <h1>Sneakers</h1>
+        <ul className={isVisible ? `visible` : `menu-items`}>
+          <IoClose className="close-icon" onClick={() => setIsVisible(false)} />
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
 
         <IoCartOutline onClick={() => setShowCart(true)} />
         <img className="avatar" src={imgAvatar} alt="Image Avatar" />
       </nav>
-      <ul className={isVisible ? `visible` : `menu-items`}>
-        <IoClose className="close-icon" onClick={() => setIsVisible(false)} />
-        <li>Collections</li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+
       <div className={showCart ? "show-cart" : "hide-cart"}>
         <Cart>
           {cart.length > 0
@@ -49,7 +49,7 @@ const Nav = () => {
             : null}
         </Cart>
       </div>
-    </>
+    </div>
   );
 };
 
